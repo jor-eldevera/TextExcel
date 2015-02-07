@@ -19,7 +19,7 @@ public class Program {
 			input = console.nextLine();
 			
 			// input handling
-			if (input.equals("print")) {
+			if (input.equalsIgnoreCase("print")) {
 				System.out.println(spr.printSheet());
 			}
 			if (input.indexOf("=") > -1) {
