@@ -15,7 +15,7 @@ public class Program {
 		System.out.println();
 		// asking for input
 		do {
-			System.out.print("TextExcel\\> ");
+			System.out.print("Command: ");
 			input = console.nextLine();
 			
 			// input handling
