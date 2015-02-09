@@ -8,7 +8,7 @@ public class Program {
 	// * None
 	public static void main(String[] args) {
 		Scanner console = new Scanner(System.in);
-		Spreadsheet spr = new Spreadsheet(7, 10);
+		Spreadsheet spr = new Spreadsheet(10, 7);
 		String input;
 		
 		System.out.println("Welcome to TextExcel!");
