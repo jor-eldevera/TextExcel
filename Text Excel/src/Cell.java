@@ -1,7 +1,7 @@
 
 public class Cell {
-	String cellContents = "            ";
-	String position;
+	private String cellContents = "            ";
+	private String position;
 	
 	public Cell() {
 		this.cellContents = "            ";
@@ -13,18 +13,22 @@ public class Cell {
 		int leftSpaceCount = (spaceCount - inputLength) / 2;
 		int rightSpaceCount = spaceCount - leftSpaceCount;
 		
-		cellContents = "";
+		this.cellContents = "";
 		for (int i = 0; i < leftSpaceCount; i++) {
-			cellContents += " ";
+			this.cellContents += " ";
 		}
-		cellContents += input;
+		this.cellContents += input;
 		for (int i = 0; i < rightSpaceCount; i++) { 
-			cellContents += " ";
+			this.cellContents += " ";
 		}
 	}
 	
 	public void setPosition(String pos) {
-		position = pos;
+		this.position = pos;
+	}
+	
+	public String getPosition() {
+		return position;
 	}
 	
 	public String toString() {
