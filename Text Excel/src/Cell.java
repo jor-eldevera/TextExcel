@@ -10,7 +10,7 @@ public class Cell {
 	public void setCell(String input) {
 		int inputLength = input.length();
 		int spaceCount = 12 - inputLength;
-		int leftSpaceCount = (spaceCount - inputLength) / 2;
+		int leftSpaceCount = spaceCount / 2;
 		int rightSpaceCount = spaceCount - leftSpaceCount;
 		
 		this.cellContents = "";
