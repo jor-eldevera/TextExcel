@@ -15,14 +15,14 @@ public class Program {
 		System.out.println();
 		// asking for input
 		do {
-			System.out.print("Command: ");
+			System.out.print("TextExcel\\> ");
 			input = console.nextLine();
 			
 			// input handling
 			if (input.equalsIgnoreCase("print")) {
-				System.out.println(spr.printSheet());
+				System.out.println(spr.sheet());
 			}
-			if (input.indexOf("=") > -1) {
+			else if (input.indexOf("=") > -1) {
 				String cellName = input.substring(0, input.indexOf(" "));
 				String setCellSubstring = input.substring(input.indexOf("=") + 1);
 				spr.setCell(cellName, setCellSubstring);
