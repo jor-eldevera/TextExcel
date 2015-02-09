@@ -15,11 +15,11 @@ public class Spreadsheet {
 				this.sheet[i][j] = new Cell();
 			}
 		}
+		tableLetters();
 		setPositions();	
 	}
 	
 	public String sheet() {
-		tableLetters();
 		for (int i = 0; i <= rows; i++) {
 			for (int j = 0; j <= columns; j++) {
 				sheetString += sheet[i][j].toString();
@@ -37,9 +37,8 @@ public class Spreadsheet {
 
 	
 	public void setCell(String cellName, String cellContents) {
-		for (int i = 0; i <= rows; i++) {
-			for (int j = 0; j <= columns; j++) {
-//				System.out.println(cellName + " " + sheet[i][j].getPosition());
+		for (int i = 1; i < rows; i++) {
+			for (int j = 1; j < columns; j++) {
 				if (sheet[i][j].getPosition().equals(cellName)) {
 					sheet[i][j].setCell(cellContents);
 				}
@@ -49,10 +48,10 @@ public class Spreadsheet {
 	
 	private void setPositions() {
 		String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-		for (int i = 0; i < rows; i++) {
-			for (int j = 0; j < columns; j++) {
-				System.out.println(i + " " + j);
-				this.sheet[i][j].setPosition("" + alphabet.charAt(i) + j);
+		for (int i = 1; i <= rows; i++) {
+			for (int j = 1; j <= columns; j++) {
+				this.sheet[i][j].setPosition("" + alphabet.charAt(j - 1) + i);
+
 			}
 		}
 	}
